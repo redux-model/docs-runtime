@@ -23,5 +23,11 @@ export default webpackGenius(3100, (genius) => {
     })
     .output((output) => {
       output.path = path.resolve('./docs');
+    })
+    .setUglifyConfig({
+      sourceMap: false,
+      terserOptions: {
+        mangle: false,
+      },
     });
 });
