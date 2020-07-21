@@ -10,6 +10,8 @@ const Logic: FC = () => {
       <br />
       <div className={styleButton.button} onClick={() => normalAction.increase(5)}>step = 5</div>
       <br />
+      <div className={styleButton.button} onClick={() => normalAction.reset()}>Reset</div>
+      <br />
       <p>{normalAction.useData((data) => data.counter)}</p>
     </div>
   );

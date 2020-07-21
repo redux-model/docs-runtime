@@ -9,6 +9,10 @@ class NormalModel extends Model<Data> {
     state.counter += step;
   });
 
+  reset() {
+    this.resetReducer();
+  }
+
   protected initReducer(): Data {
     return {
       counter: 0,

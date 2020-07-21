@@ -22,6 +22,10 @@ class RequestModel extends Model<Data> {
       });
   });
 
+  reset() {
+    this.resetReducer();
+  }
+
   protected initReducer(): Data {
     return {
       id: '-',

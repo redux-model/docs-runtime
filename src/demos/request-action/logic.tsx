@@ -13,6 +13,8 @@ const Logic: FC = () => {
       <br />
       <div className={styleButton.button} onClick={() => requestAction.getInfo('vue')}>Npm Vue</div>
       <br />
+      <div className={styleButton.button} onClick={() => requestAction.reset()}>Reset</div>
+      <br />
       <p style={{ color: 'green', fontWeight: 'bold' }}>{loading ? 'Loading...' : ''}&nbsp;</p>
       <p>{data.id}</p>
       <p>{data.homepage}</p>
