@@ -14,8 +14,8 @@ const Logic: FC = () => {
       <div className={styleButton.button} onClick={() => composeModel.reset()}>Reset</div>
       <br />
       <p style={{ color: 'green', fontWeight: 'bold' }}>{loading ? 'Loading...' : ''}&nbsp;</p>
-      <p>{data.id}</p>
-      <p>{data.homepage}</p>
+      <p>{data.react.id || '-'}: {data.react.homepage || '-'}</p>
+      <p>{data.vue.id || '-'}: {data.vue.homepage || '-'}</p>
     </div>
   );
 };

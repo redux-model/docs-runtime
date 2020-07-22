@@ -3,8 +3,14 @@ import sleep from 'sleep-promise';
 import { $api } from '../services/api';
 
 interface Data {
-  id: string;
-  homepage: string;
+  react: Partial<{
+    id: string;
+    homepage: string;
+  }>;
+  vue: Partial<{
+    id: string;
+    homepage: string;
+  }>;
 }
 
 interface Response {
@@ -25,8 +31,14 @@ class ComposeModel extends Model<Data> {
     await sleep(100);
 
     this.changeReducer((state) => {
-      state.id = reactResult.response._id;
-      state.homepage = vueResult.response.homepage;
+      state.react = {
+        id: reactResult.response._id,
+        homepage: reactResult.response.homepage,
+      };
+      state.vue = {
+        id: vueResult.response._id,
+        homepage: vueResult.response.homepage,
+      };
     });
   });
 
@@ -36,8 +48,8 @@ class ComposeModel extends Model<Data> {
 
   protected initReducer(): Data {
     return {
-      id: '-',
-      homepage: '-',
+      react: {},
+      vue: {},
     };
   }
 }
