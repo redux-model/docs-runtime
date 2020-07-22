@@ -20,4 +20,4 @@ class NormalModel extends Model<Data> {
   }
 }
 
-export const normalAction = new NormalModel();
+export const normalModel = new NormalModel();

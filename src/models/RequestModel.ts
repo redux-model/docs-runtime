@@ -34,4 +34,4 @@ class RequestModel extends Model<Data> {
   }
 }
 
-export const requestAction = new RequestModel();
+export const requestModel = new RequestModel();
